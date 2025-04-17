@@ -1,5 +1,12 @@
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
+import {
+  ArrowUpRight,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Send,
+} from "lucide-react";
 import "@fontsource/inter";
 import accueilImage from "./images/accueil.png";
 import logo from "./images/logo_blanc.png";
@@ -9,7 +16,17 @@ import dataImage from "./images/data.png";
 import designImage from "./images/design.png";
 import productImage from "./images/product.png";
 import pubImage from "./images/pub.png";
-import pub2Image from "./images/pub2.png";
+import systalink from "./images/systalink-logo.png";
+import fpt from "./images/3fpt-logo.png";
+import ppe from "./images/ppe-logo.png";
+import polaris from "./images/polaris-asso-logo.png";
+import tidianeDia from "./images/tidiane-dia.png";
+import moustaphaMbaye from "./images/moustapha-mbaye.png";
+import aramataBadji from "./images/aramata-badji.png";
+import moustaphaGueye from "./images/moustapha-gueye.png";
+import cheikhTidianeKa from "./images/cheikh-tidiane-ka.png";
+import ndeyeFatouDeme from "./images/ndeye-fatou-deme.png";
+import logoX from "./images/logo-x.png";
 
 function App() {
   return (
@@ -25,8 +42,42 @@ function App() {
         </div>
 
         <div className="relative h-full">
-          <nav className="container mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-between">
-            <img src={logo} alt="Xamle Logo" className="h-8 sm:h-12" />
+          <nav className="container mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-between pt-8">
+            <div className="flex items-center gap-16 pl-12">
+              <img src={logo} alt="Xamle Logo" className="h-12 sm:h-12" />
+              <div className="flex items-center gap-16">
+                <a
+                  href="#about"
+                  className="text-white hover:text-gray-200 transition-colors text-lg font-medium"
+                >
+                  À propos
+                </a>
+                <a
+                  href="#expertises"
+                  className="text-white hover:text-gray-200 transition-colors text-lg font-medium"
+                >
+                  Nos expertises
+                </a>
+                <a
+                  href="#projets"
+                  className="text-white hover:text-gray-200 transition-colors text-lg font-medium"
+                >
+                  Nos projets
+                </a>
+                <a
+                  href="#equipe"
+                  className="text-white hover:text-gray-200 transition-colors text-lg font-medium"
+                >
+                  Equipe
+                </a>
+              </div>
+            </div>
+            <a
+              href="mailto:contact@xamle.io"
+              className="bg-white text-black px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Nous contacter
+            </a>
           </nav>
 
           <div className="container mx-auto px-4 sm:px-6 h-full flex flex-col justify-between">
@@ -212,40 +263,296 @@ function App() {
                 <img
                   src={pubImage}
                   alt="Illustration publicitaire"
-                  className="w-[539px] h-[1058px] rounded-2xl"
+                  className="w-full rounded-2xl"
                 />
               </div>
             </div>
 
-            {/* Right side - Text */}
-            <div className="flex-1 -mt-[56rem]">
-              <h2 className="text-4xl font-bold mb-6 flex items-center gap-1">
-                On fait aussi de
-                <br />
-                la PUB deh <span className="text-4xl">😎</span>
-              </h2>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                De la direction artistique au copywriting,
-                <br />
-                nos équipes sont des AS des campagnes
-                <br />
-                créatives.
-              </p>
+            {/* Right side - Content */}
+            <div className="flex-1 flex flex-col items-center justify-center">
+              <div className="text-center mb-16">
+                <h2 className="text-5xl font-bold mb-4">
+                  On fait aussi de
+                  <br />
+                  la PUB deh{" "}
+                  <span role="img" aria-label="cool" className="text-4xl">
+                    😎
+                  </span>
+                </h2>
+                <p className="text-3xl mb-12">...en 360°</p>
+
+                <p className="text-gray-700 text-lg">
+                  De la direction artistique au copywriting,
+                  <br />
+                  en passant par le digital et la production...
+                  <br />
+                  nos équipes sont des AS des
+                  <br />
+                  campagnes créatives.
+                </p>
+              </div>
+
+              {/* Services Cards - Using grid for better control */}
+              <div className="grid grid-cols-1 gap-4 w-full max-w-xl">
+                {/* Digital Card */}
+                <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+                  <h3 className="text-2xl font-bold mb-2">DIGITAL</h3>
+                  <p className="text-gray-700">
+                    Parce qu'aujourd'hui,
+                    <br />
+                    être visible ne suffit plus :
+                    <br />
+                    il faut être remarquable.
+                  </p>
+                </div>
+
+                {/* Branding Card - Shifted right */}
+                <div className="bg-[#FFB74A] text-white rounded-2xl p-6 shadow-sm translate-x-20 -my-4">
+                  <h3 className="text-2xl font-bold mb-2">BRANDING</h3>
+                  <p>
+                    Parce qu'une marque forte,
+                    <br />
+                    c'est une identité qui colle,
+                    <br />
+                    qui claque, qui dure.
+                  </p>
+                </div>
+
+                {/* Copywriting Card */}
+                <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+                  <h3 className="text-2xl font-bold mb-2">COPYWRITING</h3>
+                  <p className="text-gray-700">
+                    Parce que ce n'est pas
+                    <br />
+                    ce que vous dites qui compte,
+                    <br />
+                    mais comment vous le dites.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Second Image Container */}
-          <div className="-mt-[52rem] flex justify-end pr-32">
-            <div className="w-1/3 rounded-3xl overflow-hidden border border-gray-100">
+      {/* Partners Section */}
+      <div className="bg-[#F8F8F8] py-16">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center gap-20">
+            <h2 className="text-2xl font-bold text-[#202020]">
+              Ils nous font
+              <br />
+              confiance !!!
+            </h2>
+            <div className="flex items-center gap-16">
               <img
-                src={pub2Image}
-                alt="Publicité secondaire"
-                className="w-[600px] h-[743px]"
+                src={systalink}
+                alt="Systalink"
+                className="h-8 object-contain opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src={fpt}
+                alt="3FPT"
+                className="h-8 object-contain opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src={ppe}
+                alt="PPE"
+                className="h-8 object-contain opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src={polaris}
+                alt="Polaris Asso"
+                className="h-8 object-contain opacity-70 hover:opacity-100 transition-opacity"
               />
             </div>
           </div>
         </div>
       </div>
+
+      {/* Team Section */}
+      <div className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#202020]">LA TEAM</h2>
+            <p className="text-xl text-gray-600 mt-2">We are Xamle</p>
+          </div>
+
+          <div className="grid grid-cols-3 gap-8">
+            {/* Row 1 */}
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-100 rounded-lg overflow-hidden mb-4 w-full aspect-square">
+                <img
+                  src={tidianeDia}
+                  alt="Tidiane Dia"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[#202020]">TIDIANE DIA</h3>
+              <p className="text-gray-600">CEO</p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-100 rounded-lg overflow-hidden mb-4 w-full aspect-square">
+                <img
+                  src={moustaphaMbaye}
+                  alt="Moustapha Mbaye"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[#202020]">
+                MOUSTAPHA MBAYE
+              </h3>
+              <p className="text-gray-600">CREATIVE DIRECTOR</p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-100 rounded-lg overflow-hidden mb-4 w-full aspect-square">
+                <img
+                  src={aramataBadji}
+                  alt="Aramata Badji"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[#202020]">
+                ARAMATA BADJI
+              </h3>
+              <p className="text-gray-600">CHIEF PRODUCT OFFICER</p>
+            </div>
+
+            {/* Row 2 */}
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-100 rounded-lg overflow-hidden mb-4 w-full aspect-square">
+                <img
+                  src={moustaphaGueye}
+                  alt="Moustapha Gueye"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[#202020]">
+                MOUSTAPHA GUEYE
+              </h3>
+              <p className="text-gray-600">CHIEF DIGITAL OFFICER</p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-100 rounded-lg overflow-hidden mb-4 w-full aspect-square">
+                <img
+                  src={cheikhTidianeKa}
+                  alt="Cheikh Tidiane Ka"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[#202020]">
+                CHEIKH TIDIANE KA
+              </h3>
+              <p className="text-gray-600">CHIEF TECHNICAL OFFICER</p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-100 rounded-lg overflow-hidden mb-4 w-full aspect-square">
+                <img
+                  src={ndeyeFatouDeme}
+                  alt="Ndeye Fatou Deme"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[#202020]">
+                NDEYE FATOU DEME
+              </h3>
+              <p className="text-gray-600">DEV FULL STACK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-black text-white py-16">
+        <div className="container mx-auto px-6">
+          <div className="flex justify-between items-start">
+            {/* Left side */}
+            <div className="flex items-start gap-32">
+              {/* Logo and CTA */}
+              <div className="flex flex-col gap-2">
+                <img src={logoX} alt="Xamle" className="w-8 h-8" />
+                <div className="flex items-center gap-4">
+                  <p className="text-white">
+                    Tu veux traduire ton idée en projet ?
+                  </p>
+                  <a
+                    href="mailto:contact@xamle.io"
+                    className="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors text-sm"
+                  >
+                    Nous contacter
+                  </a>
+                </div>
+              </div>
+
+              {/* Newsletter */}
+              <div className="flex flex-col gap-4">
+                <h3 className="text-white font-bold">
+                  S'inscrire à<br />
+                  notre newsletter
+                </h3>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="email"
+                    placeholder="Adresse Email"
+                    className="bg-transparent border-b border-white text-white placeholder-gray-400 pb-2 focus:outline-none"
+                  />
+                  <button
+                    type="button"
+                    className="text-white hover:text-gray-300 transition-colors"
+                  >
+                    <Send size={20} />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-6">
+              <a
+                href="https://facebook.com/xamle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-gray-300 transition-colors"
+              >
+                <Facebook size={24} />
+              </a>
+              <a
+                href="https://twitter.com/xamle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-gray-300 transition-colors"
+              >
+                <Twitter size={24} />
+              </a>
+              <a
+                href="https://instagram.com/xamle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-gray-300 transition-colors"
+              >
+                <Instagram size={24} />
+              </a>
+              <a
+                href="https://linkedin.com/company/xamle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-gray-300 transition-colors"
+              >
+                <Linkedin size={24} />
+              </a>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="mt-16 text-sm text-gray-400">
+            © 2025 XamleGroup. Tous droits réservés.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
