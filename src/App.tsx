@@ -43,33 +43,33 @@ function App() {
           <img
             src={accueilImage}
             alt="Woman with VR headset"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
         </div>
 
         <div className="relative h-full">
-          <nav className="container mx-auto px-6 py-6 flex items-center justify-between">
+          <nav className="container mx-auto px-4 md:px-6 py-4 md:py-6 flex items-center justify-between">
             <img src={logo} alt="Xamle Logo" className="h-12" />
             {/* <div className="text-white text-2xl font-bold">Xamle</div> */}
           </nav>
 
-          <div className="container mx-auto px-6 h-full flex flex-col justify-between">
-            <div className="pt-20">
+          <div className="container mx-auto px-4 md:px-6 h-full flex flex-col justify-between">
+            <div className="pt-12 md:pt-20">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 flex flex-col items-start gap-4">
                 Façonnons
-                <div className="px-20">
+                <div className="px-8 md:px-20">
                   <span className="bg-[#EFD9B4]/60 text-[#6A1B9A] px-2 py-0 rounded-lg inline-block">
                     vos succès
                   </span>
                 </div>
-                <div className="px-44">ensemble !</div>
+                <div className="px-16 md:px-44">ensemble !</div>
               </h1>
             </div>
 
-            <div className="pb-40">
+            <div className="pb-20 md:pb-40">
               <a
                 href="mailto:contact@xamle.io?subject=Demande de devis&body=Bonjour,%0D%0A%0D%0AJe souhaite obtenir un devis pour mon projet.%0D%0A%0D%0AMerci de me recontacter pour en discuter.%0D%0A%0D%0ACordialement,"
-                className="inline-flex bg-[#EFD9B4] text-black px-8 py-4 rounded-[12px] font-semibold hover:bg-opacity-90 transition-colors items-center gap-2 w-[275px] h-[63px] justify-center"
+                className="inline-flex bg-[#EFD9B4] text-black px-6 md:px-8 py-4 rounded-[12px] font-semibold hover:bg-opacity-90 transition-colors items-center gap-2 w-[250px] md:w-[275px] h-[63px] justify-center"
               >
                 Je veux un devis <Rocket className="w-5 h-5" />
               </a>
